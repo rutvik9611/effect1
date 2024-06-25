@@ -1,0 +1,39 @@
+import React, { useEffect, useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+
+function Photo() {
+
+    const [Items, setItems] = useState([])
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/photos')
+            .then(response => response.json())
+            .then(data => setItems(data))
+    })
+
+    return (
+        <>
+            <Container className='photo'>
+                <h1 className='fs-2 text-center mt-5 mb-5'>Photo API</h1>
+                <div className='d-flex flex-wrap justify-content-center'>
+                    {Items.map(items => (
+                        <Card style={{ width: '18rem', margin: '1rem' }} key={items.id} className='ph1_card' id='ph_card'>
+                            <div className='d-flex justify-content-center'>
+                                <img src={require('../Image/images.png')} alt="" className='img-fluid pb-2' />
+                            </div>
+                            <Card.Body>
+                                <Card.Title className='text-center'><label className='fw-bold me-2'>Id:</label>{items.id}</Card.Title>
+                                <Card.Text><label className='fw-bold me-2 fs-5'>Title:</label>{items.title}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    ))}
+                </div>
+            </Container>
+        </>
+    )
+}
+
+export default Photo

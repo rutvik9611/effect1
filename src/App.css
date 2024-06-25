@@ -1,0 +1,44 @@
+#p_card.p1_card {
+    border-color: black;
+    border-width: 3px;
+}
+#c_card.c1_card{
+    border-color: black;
+    border-width: 3px;
+}
+#a_card.a1_card{
+    border-color: black;
+    border-width: 3px;
+}
+#ph_card.ph1_card{
+    border-color: black;
+    border-width: 3px;
+}
+#t_card.t1_card{
+    border-color: black;
+    border-width: 3px;
+}
+#u_Card.u1_card{
+    border-color: black;
+    border-width: 3px ;
+}
+
+.comment img{
+    height: 100px;
+}
+.posts img{
+    height: 100px;
+}
+.albums img{
+    height: 100px;
+}
+.photo img{
+    height: 130px;
+}
+.todo img{
+    height: 130px;
+}
+.user img{
+    height: 130px;
+}
+
